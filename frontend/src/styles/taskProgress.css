@@ -1,0 +1,30 @@
+.task-progress {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+  }
+  .tasks-section{
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.5s ease-in-out;
+  }
+  

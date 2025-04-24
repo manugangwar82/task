@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    
+}
+/* 🔥 Toast body styling */
+
+  
+  /* 👇 Mobile-specific tweaks */
+  @media (max-width: 480px) {
+    .custom-toast-body {
+      font-size: 14px;
+      padding: 10px;
+      max-width: 90vw;
+    }
+  
+    .custom-toast {
+      top: 10px !important;
+      left: 5% !important;
+      right: 5% !important;
+      width: 90% !important;
+    }
+    .custom-toast-body {
+        font-size: 14px;
+        padding: 10px 10px;
+        border-radius: 12px;
+        min-width: 200px;
+        max-width: 70vw;
+        word-wrap: break-word;
+      }
+      .custom-toast-body {
+        white-space: normal !important;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+      
+  }
+  
+  .error-message{
+    color: red;
+    padding-bottom: 10px;
+  }

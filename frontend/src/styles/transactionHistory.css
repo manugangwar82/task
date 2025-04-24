@@ -1,0 +1,122 @@
+.transaction-container {
+  max-width: 600px;
+  margin: auto;
+  /* height: 830px; */
+  /* padding: 20px; */
+  /* border: 2px solid red; */
+  /* box-shadow: 0 6px 3px rgba(0, 0, 0, 0.08); */
+  /* background: #f3f3f3; */
+}
+
+.transaction-card {
+  background: #f3f3f3;
+  border-radius: 16px;
+ 
+  padding: 30px;
+  transition: 0.3s;
+  /* height: 780px; */
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.transaction-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tabs button.active {
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.transaction-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transaction-card-item {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  /* border-left: 5px solid #007bff; */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  padding: 10px 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03); */
+  transition: transform 0.2s;
+}
+
+.transaction-card-item:hover {
+  transform: translateY(-3px);
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.label {
+  font-weight: 500;
+  color: #555;
+}
+
+.value {
+  color: #222;
+  font-weight: 500;
+}
+
+.status {
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.status.pending {
+  color: #FFC107;
+  color: #FFA500;
+}
+
+.status.approved {
+  color: #28a745;
+}
+
+.status.failed {
+  color: #f44336;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+}
+.amount.deposits {
+  color: #4caf50; /* Green for deposits */
+  font-weight: 600;
+}
+
+.amount.withdrawals {
+  color: #f44336; /* Red for withdrawals */
+  font-weight: 600;
+}

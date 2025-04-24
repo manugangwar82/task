@@ -1,0 +1,112 @@
+.dashboard {
+    max-width: 600px;
+    margin: auto;
+    /* background-color: #eaff00; */
+    /* background-color: #F5F5F5; */
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+}
+
+.dash-announce {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.dash-announce1 {
+    color: rgba(255, 255, 255, 0.586);
+    font-size: 20px;
+    background-color: #3736366b;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.dash-header {
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 5px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+    align-items: center;
+    /* background-color: rgb(79, 17, 249); */
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+    border-radius: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.dashboard-header>h1 {
+    margin: 0;
+    font-size: 18px;
+    background: linear-gradient(90deg, #ff6464, #af42d3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
+}
+
+.dashboard-header>img {
+    /* width: 70px; */
+    height: 50px;
+
+}
+
+.dashboard-price {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 5px;
+    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.395);
+
+}
+
+.wallet-icon {
+    font-size: 20px;
+    color: rgba(255, 119, 0, 0.856);
+    /* color: rgba(214, 121, 41, 0.836); */
+    /* color: #8f39cc; */
+}
+
+.dashboard-wallet {
+    color: rgba(255, 255, 255, 0.846);
+
+}
+
+.red-dot {
+    position: absolute;
+    top: -1px;
+    right: 2px;
+    height: 9px;
+    width: 9px;
+    background-color: rgba(255, 0, 0, 0.835);
+    border-radius: 50%;
+}
+
+
+@media (max-width: 470px) {
+
+
+    .dashboard-header {
+        padding: 8px 5px;
+        border-radius: 0px;
+
+    }
+
+    .wallet-icon {
+        font-size: 20px;
+    }
+
+    .dashboard-wallet {
+        color: rgba(255, 255, 255, 0.846);
+        /* color: rgba(255, 255, 255, 0.759); */
+        font-size: 11px;
+        /* font-weight: 500; */
+    }
+
+}

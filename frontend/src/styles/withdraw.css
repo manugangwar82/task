@@ -1,0 +1,232 @@
+.withdraw-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    /* background: #fff; */
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+    /* border-radius: 20px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d1d1d1;
+    margin: 0;
+  }
+  .withdraw-title{
+    color: #d1d1d1;
+  }
+  .withdraw-balance{
+    color: #d4d4d4;
+  }
+  .subtitle {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .balance-box {
+    background-color: #9d484878;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .balance-box h1 {
+    font-size: 28px;
+    color: #000;
+    color: #d1d1d1;
+    margin-top: 5px;
+  }
+  
+  .method-section label {
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+    color: #444;
+    color: #d1d1d1;
+  }
+  
+  .method-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .method-buttons button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #464444;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .method-buttons button.active,
+  .method-buttons button:hover {
+    /* background-color: #4e73df;
+    color: #fff; */
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+    border-color: #4e73df;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+   
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    color: #d1d1d1;
+   
+  }
+  .withdraw-input::placeholder{
+    color: #d1d1d1;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+    border-radius: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #d1d1d1;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #bababa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .confirm-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #218838;
+  }
+  
+  .info-box {
+    background: #4a097579;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #d1d1d1;
+  }
+  
+  .info-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  .error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+  }
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .popup-box {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: scaleUp 0.3s ease-in-out;
+    max-width: 250px;
+  }
+  
+  .popup-box h3 {
+    margin: 0;
+    color: #27ae60;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .popup-box p {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  .withdraw-card{
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+    /* background: #fdfdfd;  */
+    border: 1px solid #eeeeee53;
+    /* border-left: 5px solid #007bff; */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    padding: 10px 20px;
+   
+    border-radius: 12px;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03); */
+    transition: transform 0.2s;
+  }
+  .label-withdraw{
+    color: #d1d1d1;
+  }
+  .value-withdraw{
+    color: #d1d1d1;
+  }
+  .withdraw-amount{
+    color: #f44336; /* Red for withdrawals */
+  }
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 468px) {
+    .withdraw-container {
+      padding: 5px 8px;
+      padding-bottom: 80px;
+
+    }
+  }
+  

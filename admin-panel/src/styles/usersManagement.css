@@ -1,0 +1,418 @@
+/* src/admin/UsersManagement.css */
+
+
+.users-container {
+    padding: 30px;
+    background-color: #fdfdfd;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .users-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    
+  }
+  /* Search Input Style */
+.search-input {
+    width: 300px;
+    padding: 15px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    color: #333;
+    /* margin-bottom: 20px; */
+  }
+  
+  /* Focus effect */
+  .search-input:focus {
+    border-color: #6666ff;
+    box-shadow: 0 0 0 3px rgba(102, 102, 255, 0.2);
+  }
+  
+  /* Optional hover effect */
+  .search-input:hover {
+    border-color: #aaa;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    background: #fff;
+  }
+  
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+  }
+  
+  .users-table th,
+  .users-table td {
+    text-align: left;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+  
+  .users-table th {
+    background-color: #fafafa;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  .users-table tr:hover {
+    background-color: #f5faff;
+  }
+  
+  .view-btn,
+  .edit-btn {
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .view-btn {
+    background-color: #e0f7ff;
+    color: #007b9e;
+  }
+  
+  .edit-btn {
+    background-color: #ffe9e0;
+    color: #d45a00;
+  }
+  
+  .view-btn:hover {
+    background-color: #c5efff;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
+  }
+  
+  .edit-btn:hover {
+    background-color: #ffccb2;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
+  }
+
+  
+
+/* MODAL OVERLAY - dark background behind popup */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* MODAL BOX - clean white popup */
+  .modal-box {
+    background-color: #fff; /* pure white */
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    color: #333; /* default text color */
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* Title style */
+  .modal-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #222;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  /* Modal text */
+  .modal-content p {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+  
+  .modal-content span {
+    font-weight: bold;
+    color: #111;
+  }
+  
+  /* Close button */
+  .close-btn {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #000;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  
+
+/* 
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 30, 0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+
+  .modal-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 380px;
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .modal-box.glass-effect {
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+
+  .modal-content p {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  
+  .modal-content span {
+    font-weight: 600;
+    color: #ddd;
+  }
+  
+
+  .close-btn {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #e84343;
+  }
+  
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+   */
+
+
+   .edit-modal {
+    width: 400px;
+  }
+  
+  .modal-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .modal-buttons {
+    margin-top: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+  /* border: 2px solid red; */
+    
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    margin-top: 18px;
+    color: white;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  /* 🌿 Referral Tree Styles */
+.tree-container {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.tree-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+}
+
+.tree-container > li {
+  position: relative;
+  margin: 10px 0 10px 20px;
+  padding-left: 20px;
+}
+
+.tree-container > li::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #ddd;
+}
+
+.tree-node {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.tree-node:hover {
+  transform: scale(1.02);
+  background-color: #f9f9f9;
+}
+
+.tree-username {
+  font-weight: 600;
+  color: #333;
+}
+
+.tree-vip {
+  background-color: #eef0f3;
+  color: #666;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 15px;
+}
+
+
+
+.user-top-cont{
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+
+
+
+
+/* Action Buttons */
+.tree-btn,
+.delete-btn,
+.reset-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* 🌳 Referrals - Green shade */
+.tree-btn {
+  background-color: #e3fbe3;
+  color: #2e7d32;
+}
+
+.tree-btn:hover {
+  background-color: #c5f4c5;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
+}
+
+/* 🗑 Delete - Red shade */
+.delete-btn {
+  background-color: #ffe5e5;
+  color: #d32f2f;
+}
+
+.delete-btn:hover {
+  background-color: #ffc9c9;
+  box-shadow: 0 2px 8px rgba(211, 47, 47, 0.2);
+}
+
+/* 🔑 Reset Password - Indigo shade */
+.reset-btn {
+  background-color: #ece8ff;
+  color: #5e35b1;
+}
+
+.reset-btn:hover {
+  background-color: #d9d2ff;
+  box-shadow: 0 2px 8px rgba(94, 53, 177, 0.2);
+}
+
+  

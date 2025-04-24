@@ -1,0 +1,518 @@
+.dashboard-container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.dashboard-container-main {
+  max-width: 550px;
+  margin: auto;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  max-width: 400px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-username {
+  font-size: 16px;
+  font-weight: 500;
+  color: #d6d6d6;
+}
+
+.header-id {
+  font-size: 14px;
+  color: #b6b6b6;
+}
+
+.header {
+  display: flex;
+  height: 300px;
+  /* background: linear-gradient(135deg, #0052d4, #4364f7); */
+  background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  flex-direction: column;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
+  height: 50px;
+}
+
+.header>h2 {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
+
+.vip-level {
+  background-color: #00000064;
+  padding: 10px 10px;
+  height: 143px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: #000000;
+  text-align: center;
+  position: relative;
+}
+
+.vip-img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 70%;
+  right: 35%;
+
+}
+
+.vip-badge {
+  background: #222;
+  color: #ffcc00;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+
+}
+
+.level {
+  font-size: 15px;
+  text-align: left;
+  color: rgb(215, 214, 214);
+}
+
+.vip-progress-bar {
+  background: #eee;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.vip-progress {
+  height: 100%;
+  background: linear-gradient(to right, rgb(246, 202, 254), rgb(208, 0, 255));
+}
+
+p.totals {
+  text-align: left;
+  color: rgb(215, 214, 214);
+}
+
+.claim-reward-btn {
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  /* margin-top: 10px; */
+  font-size: 10px;
+  box-shadow: 0 2px 20px rgb(231, 82, 82);
+}
+
+.btn-cont {
+  text-align: right;
+}
+
+/* .claim-reward-btn:hover {
+  background: linear-gradient(140deg, #f0b8b8, #ff0000);
+
+} */
+
+.claim-reward-btn.disabled {
+  background-color: gray;
+  padding: 8px 10px;
+  cursor: not-allowed;
+  color: #dbdbdb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+
+
+.balance-card {
+  background: #ffffff;
+  padding: 20px 15px;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  bottom: 60px;
+
+}
+
+.balance-info {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.text-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.with-depo {
+  margin: 0;
+  padding: 0;
+  color: #c62828;
+
+}
+
+.balance {
+  font-size: 20px;
+  margin: 5px 0px;
+  padding-left: 10px;
+  font-weight: bold;
+
+}
+
+.deposit-btn {
+  border: none;
+  padding: 10px 21px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  border-color: #4e73df;
+}
+
+.withdraw-btn {
+
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  border-color: #4e73df;
+}
+
+.earnings-card {
+  color: rgb(39, 39, 39);
+  border-radius: 15px;
+  padding: 16px;
+  border: 1px solid rgb(239, 239, 239);
+}
+
+.green {
+  color: #4caf50;
+}
+
+.card-header {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-item {
+  text-align: left;
+}
+
+.amount1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.label-title {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card-arrow {
+  font-size: 1.2rem;
+  background: white;
+  color: #f26522;
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+
+.services {
+  position: relative;
+  top: 0%;
+  bottom: 50px;
+
+}
+
+h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.service-item {
+  flex: 1;
+  max-width: 500px;
+  padding: 10px;
+  background: #eef2f3;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  border-color: #4e73df;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icon ka size */
+/* .logout-icon {
+  font-size: 15px;
+  margin-left: 10px;
+} */
+
+.logout:hover {
+
+  color: rgb(255, 0, 0);
+}
+
+.reset-password-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: left;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal-buttons button {
+  margin: 10px 0px;
+  padding: 10px 20px;
+
+}
+.modal-buttons {
+  display: flex;
+  gap: 40px;
+
+}
+/* .cancel-btn{
+margin-left: 10px;
+} */
+
+.reset-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.reset-input:focus {
+  border-color: #007BFF;
+}
+
+.password-group-me{
+  position: relative; /* 👁️ For positioning eye icon */
+}
+
+.toggle-eye-me {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
+.eye-togle-me{
+  /* color: red; */
+  font-size: 19px;
+}
+
+.me-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+
+
+
+@media (max-width: 470px) {
+  .dashboard-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 0px;
+  }
+
+  .header {
+    /* height: 300px; */
+    padding: 0px 10px;
+    padding-top: 10px;
+    border-radius: 0px;
+  }
+
+  .header>h2 {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .with-depo {
+    margin: 0;
+    /* font-weight: 900; */
+    font-size: 13px;
+    color: #070707ec;
+
+  }
+
+  .balance {
+    font-size: 15px;
+    color: #000000;
+    /* color: #c62828; */
+    font-weight: bold;
+
+
+  }
+
+  .label-title {
+    font-size: 13px;
+  }
+
+  .vip-img {
+    width: 140px;
+    height: 140px;
+    right: 30.1%;
+
+  }
+
+  .vip-level {
+    /* margin: 0px 10px; */
+    /* margin-top: 10px; */
+    box-shadow: 0 4px 20px #4b2268;
+  }
+
+  .claim-reward-btn {
+    /* top:68%; */
+    /* right: 79%; */
+    color: #f3f3f3fc;
+    font-size: 10px;
+
+
+  }
+
+  .vip-badge {
+    font-size: 16px;
+  }
+
+  .level {
+    font-size: 13px;
+  }
+
+  .vip-progress {
+    background: linear-gradient(to right, rgb(246, 202, 254), rgb(255, 0, 0));
+  }
+
+  .totals {
+    font-size: 13px;
+    font-weight: bold;
+    color: #403f3f;
+  }
+
+  .services {
+    /* margin-top: 30px; */
+    padding: 0px 11px;
+
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  .service-item {
+
+    font-size: 14px;
+  }
+
+
+
+}

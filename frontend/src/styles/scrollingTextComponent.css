@@ -1,0 +1,63 @@
+.scrolling-container {
+    /* width: 95%; */
+    overflow: hidden;
+    /* background: #ececec; */
+    /* background: linear-gradient(90deg, #fff6e5, #ffecb3); */
+    /* background-color:rgba(217, 239, 205, 0.273); */
+    padding: 10px 0px;
+ 
+    border-radius: 15px;
+    white-space: nowrap;
+    position: relative;
+    margin: auto;
+    margin: 5px 0px;
+    z-index: 1;
+    /* border: 2px solid black; */
+  }
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 12s linear infinite;
+    font-size: 14px;
+    color: #ffffffdf;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .volume{
+    position: absolute;
+    /* background-color: rgb(229, 224, 224); */
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+  }
+  .v-up{
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.868);
+  }
+  @keyframes scrollText {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @media (max-width: 468px) {
+  
+    .scrolling-text {
+     
+     
+      font-size: 12px;
+     
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    
+  }
+  

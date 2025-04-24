@@ -1,0 +1,251 @@
+/* Container with smooth light gradient */
+.deposit-container {
+    /* background: linear-gradient(280deg, #fdfcfb, #f8e9dc); */
+    /* min-height: 100vh; */
+    padding: 0px 20px;
+    display: flex;
+    max-width: 550px;
+    margin: auto;
+    justify-content: center;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    /* border: 2px solid red; */
+  }
+  
+  /* Card with clean white background and smooth shadow */
+  .deposit-card {
+    /* background: #ffffffac; */
+    background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+    /* border-radius: 12px; */
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header with logo and coin info */
+  .deposit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .company-logo {
+    width: 80px;
+    /* height: 60px; */
+  }
+  
+  .coin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold; 
+    border-radius: 15px;
+    padding: 9px;
+    background-color: #33333361;
+  }
+  
+  .coin-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .trc-span{
+    color: #d1d1d1;
+  }
+  /* QR section styling */
+  .qr-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .qr-image {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Address label with soft orange accent */
+  .address-label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ff9800;
+  }
+  
+  /* Address box styling */
+  .address-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #fafafa; */
+    border: 1px solid #ddddddbe;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  .address-box input {
+    background: transparent;
+    border: none;
+    color: #fffffff0;
+    /* color: #333; */
+    flex: 1;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .address-box button {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 12px;
+  }
+  
+  .address-box button:hover {
+    background: #e68900;
+  }
+  
+  /* Recharge button styling */
+  .recharge-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff9800;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease; 
+    
+    
+  }
+  
+  /* .recharge-btn:hover {
+    background: #e68900;
+  }
+   */
+  /* Instructions section with soft background */
+  .instructions {
+    /* background: #fff7e6; */
+    background: #9c202043;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #ffffffc2;
+    line-height: 20px;
+  }
+  
+  /* Add these styles to your CSS file (e.g., depositPage.css) */
+.form-section {
+  /* background-color: #632285; */
+  /* background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%); */
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 80px #a819c5; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-section input {
+  padding: 12px 15px;
+   background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
+  border: 1px solid #ddd;
+  color: #fffffff0;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.deposit-input::placeholder{
+  color: #ffffffcb;
+}
+.form-section input:focus {
+  border-color: #3498db;
+  /* box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); */
+  outline: none;
+}
+.recharge-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+.deposit-amount{
+  color: #4caf50; /* Green for deposits */
+  font-weight: 600;
+}
+.trc-title{
+  color: white;
+}
+@media (max-width: 468px) {
+  .address-box input {
+    font-size: 13px;
+
+  }
+  input.bep-input{
+    font-size: 11px;
+  }
+  .deposit-container {
+    padding: 0px 0px;
+
+  }
+  .deposit-card {
+    padding: 10px 8px;
+    padding-bottom: 80px;
+  }
+  .form-section {
+    padding: 10px 0px;
+
+  }
+  .form-section input {
+    padding: 12px 15px;
+    font-size: 13px;
+
+  }
+  .deposit-input::placeholder{
+    font-size: 13px;
+  }
+  .instructions {
+    /* background: #fff7e6; */
+    /* background: #55141488; */
+    text-align: left;
+    padding: 5px 5px;
+    color: #dededeb3;
+    line-height:20px;
+  }
+  
+}
+@media (max-width: 370px) {
+  .address-box input {
+    font-size: 10px;
+
+  }
+  input.bep-input{
+    font-size: 9.5px;
+  }
+  .instructions>p {
+    font-size: 11px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    /* padding: 5px 5px; */
+  }
+  .instructions {
+    /* background: #fff7e6; */
+    /* background: #55141488; */
+    text-align: left;
+    padding: 5px 5px;
+    color: #eeeeeeba;
+    line-height:20px;
+  }
+  
+  
+}

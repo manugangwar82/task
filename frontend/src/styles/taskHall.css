@@ -1,0 +1,80 @@
+.task-hall-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    top: 17px;
+    /* border: 2px solid red; */
+}
+
+/* Main Box */
+.task-hall{
+    /* background-color: #5a2d0c; */
+    background-color: #76370b;
+    padding: 9px 29px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+.task-hall>span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #f2c8aa;
+}
+
+/* Side Black Corners */
+.corner {
+    position: absolute;
+    top: 100%;
+    width: 25px;
+    height: 15px;
+    background-color: black;
+    /* clip-path: polygon(100% 0, 0 0, 50% 100%); */
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    height: 25px;
+    clip-path: polygon(100% 0, 30% 100%, 100% 100%);
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    height: 25px;
+    clip-path: polygon(0 0, 0% 100%, 60% 100%);
+}
+
+/* Bottom Shadow */
+.task-hall-shadow {
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    z-index: 1;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+@media (max-width: 470px) {
+   
+    .left {
+        right: 203px;
+        height: 25px;
+
+    }
+    
+    .right {
+        left: 203px;
+        height: 25px;
+
+    }
+    
+  }
