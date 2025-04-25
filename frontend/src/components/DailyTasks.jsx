@@ -26,7 +26,7 @@ const DailyTasks = ({ user, setUser }) => {
   const fetchTasks = async () => {
     try {
       // const response = await axios.get("http://localhost:5000/api/tasks");
-      const response = await axios.get(`http://${BASE_URL}/api/tasks`);
+      const response = await axios.get(`${BASE_URL}/api/tasks`);
       // console.log("📡 Server से मिला Data:", response.data);
       // 👉 Sirf Active tasks ko UI me set karo
       const activeTasks = response.data.filter(task => task.isActive);
@@ -44,7 +44,7 @@ const DailyTasks = ({ user, setUser }) => {
       if (!token) return;
 
       // const response = await axios.get("http://localhost:5000/api/user-tasks", {
-      const response = await axios.get(`http://${BASE_URL}/api/user-tasks`, {
+      const response = await axios.get(`${BASE_URL}/api/user-tasks`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -82,7 +82,7 @@ const DailyTasks = ({ user, setUser }) => {
     try {
       const response = await axios.post(
         // "http://localhost:5000/api/buy-task",
-        `http://${BASE_URL}/api/buy-task`,
+        `${BASE_URL}/api/buy-task`,
         { taskId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
