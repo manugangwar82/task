@@ -15,7 +15,7 @@
   }
   
   .announcement-modal {
-    background: #fffef4;
+ background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
     /* border-left: 8px solid #ffd54f; */
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
@@ -35,7 +35,7 @@
   .announcement-content p {
     font-size: 0.8rem;
     margin-bottom: 8px;
-    color: #444;
+    color: #b0b0b0;
   }
   
   .announcement-footer {
@@ -82,7 +82,7 @@
      
      
       max-width: 260px;
-      height: 250px;
+
       
     }
     
@@ -94,7 +94,7 @@
     }
     
     .announcement-content p {
-      font-size: 0.8rem;
+font-size: 13px;
      
     }
     
