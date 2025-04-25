@@ -24,7 +24,7 @@ const BepDeposit = () => {
 
   const fetchDeposits = async () => {
     try {
-      const response = await axios.get(`http://${BASE_URL}/api/transactions/history`, {
+      const response = await axios.get(`${BASE_URL}/api/transactions/history`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -58,7 +58,7 @@ const BepDeposit = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        `http://${BASE_URL}/api/deposit/create`, // Static URL here
+        `${BASE_URL}/api/deposit/create`, // Static URL here
         {
           username,
           method: 'BEP20-USDT',
