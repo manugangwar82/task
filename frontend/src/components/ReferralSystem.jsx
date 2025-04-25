@@ -74,11 +74,11 @@ const ReferralSystem = ({ referralCode }) => {
   }, []);
 
   const copyReferral = () => {
-    // navigator.clipboard.writeText(`http://localhost:5173/signup?ref=${user?.referralCode}`);
-    navigator.clipboard.writeText(`http://172.20.10.3:5173/signup?ref=${user?.referralCode}`);
+    const referralLink = `${window.location.origin}/signup?ref=${user?.referralCode}`;
+    navigator.clipboard.writeText(referralLink);
     toast.success("Referral link copied!");
-    // alert("Referral link copied!")
   };
+  
   const copyInvitationcode = () => {
     navigator.clipboard.writeText(`${user?.referralCode}`);
     toast.success("Refer code copied!");
@@ -89,112 +89,119 @@ const ReferralSystem = ({ referralCode }) => {
 
   return (
     <div className="referral-wrapper">
-      <div className="referral-card">
-
-        <div className="ref-section">
-          <h2 className="ref-title">Refer a friend and  get commission {commission}%</h2>
-          <img className="ref-img" src={Referral} alt="" />
-          <div className="section">
-            <label>Invitation Code:</label>
-            <div className="inline-row">
-              <span className="code">{`${user?.referralCode}`}</span>
-              <button onClick={copyInvitationcode}>Copy</button>
-            </div>
-          </div>
-
-          <div className="section">
-            <label>Invite Your Friend and Earn Money ...</label>
-            <div className="inline-row">
-              <span className="link"> {`http://172.20.10.3:5173/signup?ref=${user?.referralCode}`}</span>
-              <button onClick={copyReferral}>Copy</button>
-            </div>
+    <div className="referral-card">
+      <div className="ref-section">
+        <h2 className="ref-title">Refer a friend and get commission {commission}%</h2>
+        <img className="ref-img" src={Referral} alt="" />
+  
+        <div className="section">
+          <label>Invitation Code:</label>
+          <div className="inline-row">
+            <span className="code">{`${user?.referralCode}`}</span>
+            <button onClick={copyInvitationcode}>Copy</button>
           </div>
         </div>
-
-        <div className="share-buttons">
-          {/* <div className="title "><p className="share-title">Share via</p></div> */}
-
-          <button
-            className="share-btn whatsapp"
-            onClick={() => {
-              window.location.href = `https://wa.me/?text=Join%20me%20and%20get%205%20USDT!%20http://192.168.1.5:5173/signup?ref=${user?.referralCode}`;
-            }}
-          >
-            WhatsApp
-          </button>
-          <button
-            className="share-btn twitter"
-            onClick={() => {
-              window.location.href = `https://twitter.com/intent/tweet?text=Earn%205%20USDT%20by%20joining%20this%20platform!%20http://192.168.1.5:5173/signup?ref=${user?.referralCode}`;
-            }}
-          >
-            Twitter
-          </button>
-          <button
-            className="share-btn instagram"
-            onClick={() => {
-              window.location.href = "https://www.instagram.com/";
-            }}
-          >
-            Instagram
-          </button>
-        </div>
-
-        <div className="stats">
-          <h3>Team Stats</h3>
-          <div className="stat-boxes">
-            <div className="stat-card">
-              <p className="stat-title">Team Income</p>
-              <p className="stat-value">${referralData.referralWallet}</p>
-            </div>
-            <div className="stat-card">
-              <p className="stat-title">Total Earning</p>
-              <p className="stat-value">${referralData.totalEarning}</p>
-            </div>
-            <div className="stat-card">
-              <p className="stat-title">Team Withdrawal</p>
-              <p className="stat-value">${referralData.totalTeamWallet}.00</p>
-            </div>
-            <div className="stat-card">
-              <p className="stat-title">New Team</p>
-              <p className="stat-value">0</p>
-            </div>
-            <div className="stat-card">
-              <p className="stat-title">First Recharge</p>
-              <p className="stat-value">0</p>
-            </div>
-            <div className="stat-card">
-              <p className="stat-title">First Withdrawal</p>
-              <p className="stat-value">0</p>
-            </div>
+  
+        <div className="section">
+          <label>Invite Your Friend and Earn Money ...</label>
+          <div className="inline-row">
+            <span className="link">{`${window.location.origin}/signup?ref=${user?.referralCode}`}</span>
+            <button onClick={copyReferral}>Copy</button>
           </div>
-        </div>
-        <div className="referred-users">
-          <h3>Referred Users</h3>
-          {referralData.referredUsers.length > 0 ? (
-            <ul className="referred-list">
-              {referralData.referredUsers.map((user) => (
-                <li key={user._id} className="referred-user-card">
-                  <div className="user-info">
-                    <span className="username">{user.username}</span>
-                    <span className="email">{user.email}</span>
-                  </div>
-                  <div className="joined-date">
-                    Joined: {new Date(user.createdAt).toLocaleDateString()}
-                  <p className="team-withdraw">Total Withdraw: ${user.wallet}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-referrals">No users referred yet.</p>
-          )}
         </div>
       </div>
-      <div className="ref-nav">
-        <BottomNavbar />
+  
+      <div className="share-buttons">
+        <button
+          className="share-btn whatsapp"
+          onClick={() => {
+            const link = `${window.location.origin}/signup?ref=${user?.referralCode}`;
+            window.location.href = `https://wa.me/?text=Join%20me%20and%20get%205%20USDT!%20${encodeURIComponent(link)}`;
+          }}
+        >
+          WhatsApp
+        </button>
+  
+        <button
+          className="share-btn twitter"
+          onClick={() => {
+            const link = `${window.location.origin}/signup?ref=${user?.referralCode}`;
+            window.location.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+             `Earn ${commission}% by joining this platform! ${link}`
+            )}`;
+          }}
+        >
+          Twitter
+        </button>
+  
+        <button
+          className="share-btn instagram"
+          onClick={() => {
+            window.location.href = "https://www.instagram.com/";
+          }}
+        >
+          Instagram
+        </button>
+      </div>
+  
+      <div className="stats">
+        <h3>Team Stats</h3>
+        <div className="stat-boxes">
+          <div className="stat-card">
+            <p className="stat-title">Team Income</p>
+            <p className="stat-value">${referralData.referralWallet}</p>
+          </div>
+          <div className="stat-card">
+            <p className="stat-title">Total Earning</p>
+            <p className="stat-value">${referralData.totalEarning}</p>
+          </div>
+          <div className="stat-card">
+            <p className="stat-title">Team Withdrawal</p>
+            <p className="stat-value">${referralData.totalTeamWallet}.00</p>
+          </div>
+          <div className="stat-card">
+            <p className="stat-title">New Team</p>
+            <p className="stat-value">0</p>
+          </div>
+          <div className="stat-card">
+            <p className="stat-title">First Recharge</p>
+            <p className="stat-value">0</p>
+          </div>
+          <div className="stat-card">
+            <p className="stat-title">First Withdrawal</p>
+            <p className="stat-value">0</p>
+          </div>
+        </div>
+      </div>
+  
+      <div className="referred-users">
+        <h3>Referred Users</h3>
+        {referralData.referredUsers.length > 0 ? (
+          <ul className="referred-list">
+            {referralData.referredUsers.map((user) => (
+              <li key={user._id} className="referred-user-card">
+                <div className="user-info">
+                  <span className="username">{user.username}</span>
+                  <span className="email">{user.email}</span>
+                </div>
+                <div className="joined-date">
+                  Joined: {new Date(user.createdAt).toLocaleDateString()}
+                  <p className="team-withdraw">Total Withdraw: ${user.wallet}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="no-referrals">No users referred yet.</p>
+        )}
       </div>
     </div>
+  
+    <div className="ref-nav">
+      <BottomNavbar />
+    </div>
+  </div>
+  
   );
 };
 export default ReferralSystem;
