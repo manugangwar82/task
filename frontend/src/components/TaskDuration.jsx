@@ -12,7 +12,7 @@ const TaskDuration = () => {
     useEffect(() => {
       const fetchDashboard = async () => {
         try {
-          const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
+          const response = await axios.get(`${BASE_URL}/api/user/dashboard`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           });
           console.log("✅ API Response:", response.data); // 📌 Response log karo
