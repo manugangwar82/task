@@ -18,7 +18,7 @@ const ReferralSystem = ({ referralCode }) => {
     const fetchReferralData = async () => {
       try {
         // const response = await axios.get("http://localhost:5000/api/auth/referral-data", {
-        const response = await axios.get(`http://${BASE_URL}/api/auth/referral-data`, {
+        const response = await axios.get(`${BASE_URL}/api/auth/referral-data`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         // console.log("referral dat", response.data);
@@ -42,7 +42,7 @@ const ReferralSystem = ({ referralCode }) => {
     const fetchDashboard = async () => {
       try {
         // const response = await axios.get("http://localhost:5000/api/user/dashboard", {
-        const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
+        const response = await axios.get(`${BASE_URL}/api/user/dashboard`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
 
