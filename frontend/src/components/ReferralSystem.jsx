@@ -116,7 +116,7 @@ const ReferralSystem = ({ referralCode }) => {
           className="share-btn whatsapp"
           onClick={() => {
             const link = `${window.location.origin}/signup?ref=${user?.referralCode}`;
-            window.location.href = `https://wa.me/?text=Join%20me%20and%20get%205%20USDT!%20${encodeURIComponent(link)}`;
+            window.location.href = `https://wa.me/?text=${encodeURIComponent( `Earn ${commission}% by joining this platform! ${link}`)}`;
           }}
         >
           WhatsApp
