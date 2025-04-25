@@ -1,9 +1,25 @@
 
-
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/announcementModal.css";
 
 const AnnouncementModal = ({ onClick }) => {
+  const [commission, setCommission] = useState(null);
+  useEffect(() => {
+    const fetchCommission = async () => {
+      try {
+        const res = await axios.get("/api/referral/settings");
+        setCommission(res.data.referralRewardPercent); // ✅ Referral percent
+      } catch (err) {
+        console.error("Error fetching referral commission:", err);
+      }
+    };
+
+    fetchCommission();
+  }, []);
+
+  console.log("commission",commission);
+  
   return (
     <div className="announcement-overlay">
       <div className="announcement-modal yellow-theme">
@@ -15,7 +31,7 @@ const AnnouncementModal = ({ onClick }) => {
           <p>✅ Instant Task Approval </p>
           <p>✅ Fast Withdrawals (10 mins avg)  </p>
           <p>✅ VIP Level Rewards  </p>
-          <p>✅ 10% Referral Bonus</p>
+          <p>✅ {commission}% Referral Bonus</p>
           <p>✅ Waiting for you to join!</p>
 
           
