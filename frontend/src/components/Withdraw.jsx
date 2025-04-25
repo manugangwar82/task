@@ -21,8 +21,8 @@ const Withdraw = () => {
   const [showPopup, setShowPopup] = useState(false); // ✅ Popup State
   const [withdrawHistory, setWithdrawHistory] = useState([]); // ✅ updated here
   const commissionRate = 0.03; // ✅ Commission is 3%
-  const commission = !isNaN(amount) ? (Number(amount) * commissionRate).toFixed(2) : "0.00";
-  const actualReceived = !isNaN(amount) ? (Number(amount) - Number(amount) * commissionRate).toFixed(2) : "0.00";
+  const commission = !isNaN(amount) ? Math.round(Number(amount) * commissionRate) : 0;
+  const actualReceived = !isNaN(amount) ? Math.round(Number(amount) - commission) : 0;
 
 
 
