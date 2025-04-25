@@ -40,7 +40,7 @@ const Signup = () => {
     setErrorr(""); // Reset error
 
     try {
-      await axios.post(`http://${BASE_URL}/api/auth/signup`, formData);
+      await axios.post(`${BASE_URL}/api/auth/signup`, formData);
       // alert("Signup Successful! Now login.");
       toast.success("Signup Successful ✅ ! Now login. ");
       // ⏳ Thoda time deke redirect karwao
