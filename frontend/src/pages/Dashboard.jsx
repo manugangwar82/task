@@ -37,7 +37,7 @@ const Dashboard = () => {
   const fetchDashboard = async () => {
     try {
       // const response = await axios.get("http://localhost:5000/api/user/dashboard", {
-      const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
+      const response = await axios.get(`${BASE_URL}/api/user/dashboard`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
@@ -84,7 +84,7 @@ const Dashboard = () => {
     try {
       const response = await axios.put( // 👈 yeh missing tha
         // "http://localhost:5000/api/user/dismiss-popup",
-        `http://${BASE_URL}/api/user/dismiss-popup`,
+        `${BASE_URL}/api/user/dismiss-popup`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );
