@@ -42,7 +42,6 @@
     background: linear-gradient(0deg, #4b2268 -12.22%, #641773 64.14%, #92278f 152%);
     padding: 15px 20px;
     margin-bottom: 20px;
-    border-left: 5px solid #00bcd4;
     border-radius: 12px;
     transition: transform 0.2s ease-in-out;
 }
