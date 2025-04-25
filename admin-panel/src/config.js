@@ -1,1 +1,1 @@
-export const BASE_URL = "192.168.1.5:5000"
+export const BASE_URL = "https://task-b1w0.onrender.com"
