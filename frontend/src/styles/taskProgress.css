@@ -1,9 +1,9 @@
 .task-progress {
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd54;
     border-radius: 8px;
-    background: #fff;
+    /* background: #fff; */
     text-align: center;
     max-width: 500px;
     margin: auto;
@@ -12,7 +12,9 @@
     max-width: 500px;
     margin: auto;
   }
-  
+  .pro{
+    color: #a5a5a5d7;
+  }
   .progress-bar {
     width: 100%;
     height: 10px;
