@@ -32,7 +32,7 @@ const Me = ({ setUser }) => {
   const fetchDashboard = async () => {
     try {
       // const response = await axios.get("http://localhost:5000/api/user/dashboard", {
-      const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
+      const response = await axios.get(`${BASE_URL}/api/user/dashboard`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       // console.log("✅ API Response:", response.data); // 📌 Response log karo
@@ -52,7 +52,7 @@ const Me = ({ setUser }) => {
     if (!newPassword) return toast.error("Please enter a new password");
     setResetLoading(true);
     try {
-      await axios.put(`http://${BASE_URL}/api/user/reset-password`,
+      await axios.put(`${BASE_URL}/api/user/reset-password`,
         { password: newPassword },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -73,7 +73,7 @@ const Me = ({ setUser }) => {
     try {
       // ✅ Call reset-popup API
       // await axios.put("http://localhost:5000/api/user/reset-popup", {}, {
-      await axios.put(`http://${BASE_URL}/api/user/reset-popup`, {}, {
+      await axios.put(`${BASE_URL}/api/user/reset-popup`, {}, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
     } catch (error) {
@@ -93,7 +93,7 @@ const Me = ({ setUser }) => {
     setRewardClaiming(true);
     try {
       // const res = await axios.post("http://localhost:5000/api/user/claim-reward", {}, {
-      const res = await axios.post(`http://${BASE_URL}/api/user/claim-reward`, {}, {
+      const res = await axios.post(`${BASE_URL}/api/user/claim-reward`, {}, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       toast.success("Reward 🎁 Claimed Successfull ✅");
