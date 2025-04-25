@@ -1,6 +1,6 @@
 // import React from "react";
 import React, { useState, useEffect } from "react";
-import "../styles/ScrollingTextComponent.css";
+import "../styles/scrollingTextComponent.css";
 // import { FaVolumeUp } from 'react-icons';
 import { FaVolumeUp} from 'react-icons/fa';
 const messages = [
