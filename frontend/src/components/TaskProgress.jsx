@@ -11,7 +11,7 @@ const TaskProgress = ({ task }) => {
       <div className="progress-bar">
         <div className="progress" style={{ width: `${progressPercent}%` }}></div>
       </div>
-      <p>{task.progress}/{task.totalDuration} Days Completed</p>
+      <p className="pro">{task.progress}/{task.totalDuration} Days Completed</p>
     </div>
   );
 };
