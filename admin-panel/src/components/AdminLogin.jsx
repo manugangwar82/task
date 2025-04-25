@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import "../styles/adminLogin.css";
 import adminLogin from "../assets/images/login.jpg";
+import { BASE_URL } from "../config";
 
 function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -10,7 +11,7 @@ function AdminLogin() {
 
   const loginHandler = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/adminAuth/login", {
+      const res = await axios.post(`http://${BASE_URL}/api/adminAuth/login`, {
         username,
         password,
       });
