@@ -15,7 +15,6 @@ import { CiWallet } from "react-icons/ci";
 import BottomNavbar from "../components/BottomNavbar"
 
 const TaskList = ({ user, setUser }) => {
-  console.log("🟢 TaskList Props:", { user, setUser });
   const [boughtTasks, setBoughtTasks] = useState([]); // ✅ Default Empty Array
   const [timers, setTimers] = useState({}); // ✅ Task Timers
   const priceToImageMap = {
