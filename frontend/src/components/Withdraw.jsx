@@ -33,7 +33,7 @@ const Withdraw = () => {
 
   const fetchDashboard = async () => {
     try {
-      const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
+      const response = await axios.get(`${BASE_URL}/api/user/dashboard`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setUserData(response.data);
@@ -46,7 +46,7 @@ const Withdraw = () => {
 
   const fetchWithdrawals = async () => {
     try {
-      const res = await axios.get(`http://${BASE_URL}/api/transactions/history`, {
+      const res = await axios.get(`${BASE_URL}/api/transactions/history`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -103,7 +103,7 @@ const Withdraw = () => {
 
     try {
       const res = await axios.post(
-        `http://${BASE_URL}/api/withdraw/request`,
+        `${BASE_URL}/api/withdraw/request`,
         {
           username: usernameInput,
           address,
