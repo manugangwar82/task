@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import TaskProgress from "../components/TaskProgress"
+import { BASE_URL } from "../config";
 
 
 
@@ -11,7 +12,7 @@ const TaskDuration = () => {
     useEffect(() => {
       const fetchDashboard = async () => {
         try {
-          const response = await axios.get("http://localhost:5000/api/user/dashboard", {
+          const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           });
           console.log("✅ API Response:", response.data); // 📌 Response log karo
