@@ -13,7 +13,7 @@ const DepositRequests = () => {
     const token = localStorage.getItem("adminToken");
 
     useEffect(() => {
-        fetch("/api/admin/deposits", {
+        fetch("https://task-b1w0.onrender.com/api/admin/deposits", {
             headers: {
                 "Authorization": `Bearer ${token}`, // Authorization header mein token bhejein
                 "Content-Type": "application/json"
@@ -45,7 +45,7 @@ const DepositRequests = () => {
     const handleApprove = (id) => {
         if (!window.confirm("Approve this deposit?")) return;
 
-        fetch(`/api/admin/deposits/${id}/approve`, {
+        fetch(`https://task-b1w0.onrender.com/api/admin/deposits/${id}/approve`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`, // Authorization header mein token bhejein
@@ -61,7 +61,7 @@ const DepositRequests = () => {
     const handleReject = (id) => {
         if (!window.confirm("Reject this deposit?")) return;
 
-        fetch(`/api/admin/deposits/${id}/reject`, {
+        fetch(`https://task-b1w0.onrender.com/api/admin/deposits/${id}/reject`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`, // Authorization header mein token bhejein
