@@ -1,0 +1,74 @@
+.clear-tasks-section {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft pastel gradient background */
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .clear-tasks-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #444; /* Darker text color for better readability */
+  }
+  
+  .users-list {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Light white background with transparency */
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .user-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-checkbox input {
+    margin-right: 10px;
+    accent-color: #a1c4fd; /* Soft blue accent color */
+  }
+  
+  .clear-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .clear-buttons button {
+    background-color: #6a9dff; /* Soft pastel blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clear-buttons button:disabled {
+    background-color: #b3d8ff; /* Light blue for disabled state */
+    cursor: not-allowed;
+  }
+  
+  .clear-buttons button:hover:not(:disabled) {
+    background-color: #5a8be1; /* Slightly darker blue on hover */
+    transform: translateY(-2px);
+  }
+  
+  .clear-buttons button:active:not(:disabled) {
+    background-color: #4778d1; /* Even darker blue on click */
+    transform: translateY(2px);
+  }
+  
