@@ -1,13 +1,14 @@
 
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import "../styles/usersManagement.css";
 
 const UsersManagement = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [search, setSearch] = useState("");
@@ -215,21 +216,11 @@ const UsersManagement = () => {
         <div className="users-container">
             <div className="user-top-cont">
                 <h2 className="users-title">👥 Users Management</h2>
-                <button className="save-btn" onClick={() => navigate("/withdraw")}>
-                    Withdraw
-                </button>
-                <button className="save-btn" onClick={() => navigate("/deposit")}>
-                    Deposit
-                </button>
-                <button className="save-btn" onClick={() => navigate("/task")}>
-                    Task Management
-                </button>
-                <button className="save-btn" onClick={() => navigate("/refer")}>
-                    Refer
-                </button>
-                <button className="save-btn" onClick={() => navigate("/broadcast")}>
-                    broadcast
-                </button>
+                <button className="save-btn"> <Link to="/withdraw" >Withdraw</Link></button>
+                <button className="save-btn" > <Link to="/deposit" >Deposit</Link></button>
+                <button className="save-btn" > <Link to="/task" >Task Management</Link></button>
+                <button className="save-btn" > <Link to="/refer" > Refer</Link></button>
+                <button className="save-btn" > <Link to="/broadcast" > broadcast</Link></button>
                 <input
                     type="text"
                     placeholder="Search by name or email"
