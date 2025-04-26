@@ -5,6 +5,12 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import "../styles/usersManagement.css";
+const BASE_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:5000"
+  : "https://task-b1w0.onrender.com";
+
+axios.defaults.baseURL = BASE_URL;
+
 
 const UsersManagement = () => {
     const navigate = useNavigate();
