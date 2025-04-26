@@ -69,7 +69,7 @@ const Dashboard = () => {
   const fetchUnreadCount = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`/api/user/notifications`, {
+      const res = await fetch(`https://task-b1w0.onrender.com/api/user/notifications`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
