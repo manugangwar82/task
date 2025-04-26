@@ -34,7 +34,7 @@ const TaskDuration = () => {
           <p className="task-loading">Loading...</p>
         ) : user?.tasks && user.tasks.length > 0 ? (
           user.tasks.map((task) => (
-            <div className="task-card" key={task._id}>
+            <div className="task-card-d" key={task._id}>
               <TaskProgress task={task} />
             </div>
           ))
