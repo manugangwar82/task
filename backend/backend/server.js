@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const path = require("path");
 const taskRoutes = require("./routes/taskRoutes"); // ✅ Task Route Import Karo
 const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes")
@@ -36,10 +35,6 @@ app.use('/api/transactions', transactionRoutes); // ✅ Add this line
 app.use('/api/adminAuth', adminAuth); // ✅ Add this line
 app.use("/api/referral",referral);
 
-app.use(express.static(path.join(__dirname, '/frontend/dist')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend','dist', 'index.html'));
-});
 
 
 // MongoDB Connection
