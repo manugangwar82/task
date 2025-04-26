@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const path = require("path");
 const taskRoutes = require("./routes/taskRoutes"); // ✅ Task Route Import Karo
 const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes")
@@ -34,6 +35,14 @@ app.use('/api/deposit', depositRoutes);
 app.use('/api/transactions', transactionRoutes); // ✅ Add this line
 app.use('/api/adminAuth', adminAuth); // ✅ Add this line
 app.use("/api/referral",referral);
+
+// ✅ Serve static files from frontend/build
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// ✅ Catch-all route for React (refresh handle)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
