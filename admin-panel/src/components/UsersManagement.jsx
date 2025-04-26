@@ -230,6 +230,9 @@ const UsersManagement = () => {
                 <button className="save-btn" onClick={() => navigate("/broadcast")}>
                     broadcast
                 </button>
+                 <button className="save-btn" onClick={() => navigate("/cleartaskssection")}>
+                    Purchase Task
+                </button>
                 <input
                     type="text"
                     placeholder="Search by name or email"
