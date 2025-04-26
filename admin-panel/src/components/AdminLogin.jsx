@@ -11,7 +11,7 @@ function AdminLogin() {
 
   const loginHandler = async () => {
     try {
-      const res = await axios.post(`http://${BASE_URL}/api/adminAuth/login`, {
+      const res = await axios.post(`${BASE_URL}/api/adminAuth/login`, {
         username,
         password,
       });
