@@ -14,6 +14,13 @@ import "../styles/taskList.css";
 import { CiWallet } from "react-icons/ci";
 import BottomNavbar from "../components/BottomNavbar"
 
+bhai tumne khali  ye  add kiya hai // ✅ Set baseURL depending on environment
+const BASE_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:5000"
+  : "https://task-b1w0.onrender.com";
+
+axios.defaults.baseURL = BASE_URL;
+
 const TaskList = ({ user, setUser }) => {
   const [boughtTasks, setBoughtTasks] = useState([]); // ✅ Default Empty Array
   const [timers, setTimers] = useState({}); // ✅ Task Timers
