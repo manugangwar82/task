@@ -2,16 +2,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
 
 import "../styles/usersManagement.css";
-const BASE_URL = window.location.hostname.includes("localhost")
-  ? "http://localhost:5000"
-  : "https://task-b1w0.onrender.com";
-
-axios.defaults.baseURL = BASE_URL;
-
 
 const UsersManagement = () => {
     const navigate = useNavigate();
@@ -36,7 +29,7 @@ const UsersManagement = () => {
     useEffect(() => {
         const token = localStorage.getItem("adminToken");
 
-        axios.get("/api/admin/users", {
+        fetch("/api/admin/users", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -82,7 +75,7 @@ const UsersManagement = () => {
         // Wallet amount ko current wallet amount ke saath add karen
         const updatedWalletAmount = selectedUser.wallet + walletAmount;
 
-        axios.get(`/api/admin/user/${selectedUser._id}`, {
+        fetch(`/api/admin/user/${selectedUser._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -116,7 +109,7 @@ const UsersManagement = () => {
             });
     };
     const handleReferralTree = (userId) => {
-        axios.get(`/api/admin/user/${userId}/referral-tree`, {
+        fetch(`/api/admin/user/${userId}/referral-tree`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("adminToken")}`
             }
@@ -131,7 +124,7 @@ const UsersManagement = () => {
 
     const handleDeleteUser = (userId) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
-            axios.get(`/api/admin/user/${userId}`, {
+            fetch(`/api/admin/user/${userId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("adminToken")}`
@@ -159,7 +152,7 @@ const UsersManagement = () => {
             return;
         }
 
-        axios.get(`/api/admin/user/${selectedUser._id}/reset-password`, {
+        fetch(`/api/admin/user/${selectedUser._id}/reset-password`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
