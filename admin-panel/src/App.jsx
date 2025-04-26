@@ -16,7 +16,7 @@ function App() {
     return token !== null; // Simplified, you can verify token with a backend request
   };
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
          {/* Login Route */}
          <Route path="/login" element={<AdminLogin />} />
