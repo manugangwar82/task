@@ -36,13 +36,11 @@ app.use('/api/transactions', transactionRoutes); // ✅ Add this line
 app.use('/api/adminAuth', adminAuth); // ✅ Add this line
 app.use("/api/referral",referral);
 
-// ✅ Serve static files from frontend/build
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-// ✅ Catch-all route for React (refresh handle)
+app.use(express.static(path.join(__dirname, 'build')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
