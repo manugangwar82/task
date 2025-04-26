@@ -8,6 +8,7 @@ import TaskManagement from "./components/TaskManagement"
 import AdminLogin from "./components/AdminLogin";
 import ReferralMonitoring from "./components/ReferralMonitoring";
 import BroadcastMessage from "./components/BroadcastMessage";
+import ClearTasksSection from "./components/ClearTasksSection";
 
 function App() {
   const isAdminAuthenticated = () => {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/task" element={isAdminAuthenticated() ? <TaskManagement /> : <Navigate to="/login" />}  />
         <Route path="/refer" element={isAdminAuthenticated() ? <ReferralMonitoring /> : <Navigate to="/login" />}  />
         <Route path="/broadcast" element={isAdminAuthenticated() ? <BroadcastMessage /> : <Navigate to="/login" />}  />
+        <Route path="/cleartaskssection" element={isAdminAuthenticated() ? <ClearTasksSection /> : <Navigate to="/login" />}  />
       </Routes>
       <ToastContainer position="top-center" autoClose={3000} />
     </Router>
