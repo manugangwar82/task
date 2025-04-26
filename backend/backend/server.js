@@ -19,7 +19,13 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: "https://campaenergy.onrender.com", // ✅ Frontend Domain
+  credentials: true, // ✅ Important for cookies / Authorization header
+};
+
+app.use(cors(corsOptions));
+
 app.use("/api", taskRoutes); // ✅ Routes Use Karo
 app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
