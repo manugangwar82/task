@@ -21,6 +21,7 @@ const app = express();
 app.use(express.json());
 const corsOptions = {
   origin: "https://campaenergy.onrender.com", // ✅ Frontend Domain
+  origin: "https://admin-vw90.onrender.com", // ✅ Frontend Domain
   credentials: true, // ✅ Important for cookies / Authorization header
 };
 
