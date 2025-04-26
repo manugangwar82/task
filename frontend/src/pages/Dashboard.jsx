@@ -14,9 +14,15 @@ import "../styles/bottomNavbar.css";
 import "../styles/dashboard.css";
 import { FaWallet } from "react-icons/fa";
 import { MdNotificationsActive } from "react-icons/md";
-import { BASE_URL } from "../config";
+// import { BASE_URL } from "../config";
 import logo from "../assets/images/Campa-Logo.svg";
 import { useNavigate } from "react-router-dom";
+
+const BASE_URL = window.location.hostname.includes("localhost")
+  ? "http://localhost:5000"
+  : "https://task-b1w0.onrender.com";
+
+axios.defaults.baseURL = BASE_URL;
 
 
 // import "./Dashboard.css";
