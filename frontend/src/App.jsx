@@ -1,70 +1,3 @@
-// import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-// import Signup  from "./components/Signup"
-// import Login  from "./components/Login"
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//       <Route path="/" element={<Navigate to="/login" />} /> 
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/signup" element={<Signup />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
-// import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-// import { useEffect, useState } from "react";
-// import Signup from "./components/Signup"
-// import Login from "./components/Login"
-// import Dashboard from "./pages/Dashboard";
-// import Me from "./components/Me";
-// import TaskList from "./components/TaskList";
-// import Leaderboard from "./components/Leaderboard"
-
-// // import BottomNavbar from "./components/BottomNavbar"
-
-// function App() {
-//   const [user, setUser] = useState(null);
-
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     if (token) {
-//       setUser(true);
-//     }
-//   }, []);
-
-//   return (
-//     <Router>
-//       <Routes>
-//         {/* Agar user login hai to / pe direct dashboard dikhaye */}
-//         <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Signup />} />
-
-//         {/* Agar user login hai to login pe direct dashboard dikhaye */}
-//         <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-//         <Route path="/signup" element={user ? <Navigate to="/dashboard" /> : <Signup />} />
-
-//         {/* Dashboard sirf login users ke liye */}
-//         <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
-//         <Route path="/me" element={<Me />} />
-//         <Route path="/tasklist" element={<TaskList user={user} setUser={setUser} />} />
-//         <Route path="/leaderboard" element={<Leaderboard/>} />
-
-//       </Routes>
-//       {/* <BottomNavbar /> */}
-//     </Router>
-
-
-//   );
-// }
-
-// export default App;
-
-
 
 
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
@@ -135,7 +68,7 @@ function App() {
   
   const fetchDashboard = async () => {
     try {
-      const response = await axios.get(`http://${BASE_URL}/api/user/dashboard`, {
+      const response = await axios.get(`${BASE_URL}/api/user/dashboard`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setUser(response.data);
