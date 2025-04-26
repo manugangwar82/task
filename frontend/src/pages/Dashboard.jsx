@@ -26,7 +26,7 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [showAnnouncement, setShowAnnouncement] = useState(true); // ⬅️ NEW
   const [unreadCount, setUnreadCount] = useState(0); // 🆕 Unread notification count
 
@@ -99,7 +99,7 @@ const Dashboard = () => {
   };
 
 
-  if (loading) return <h2>Loading...</h2>;
+  // if (loading) return <h2>Loading...</h2>;
 
   return (
     <div className="dashboard">
