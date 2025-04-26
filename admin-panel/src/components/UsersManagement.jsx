@@ -36,7 +36,7 @@ const UsersManagement = () => {
     useEffect(() => {
         const token = localStorage.getItem("adminToken");
 
-        fetch("/api/admin/users", {
+        axios.get("/api/admin/users", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -82,7 +82,7 @@ const UsersManagement = () => {
         // Wallet amount ko current wallet amount ke saath add karen
         const updatedWalletAmount = selectedUser.wallet + walletAmount;
 
-        fetch(`/api/admin/user/${selectedUser._id}`, {
+        axios.get(`/api/admin/user/${selectedUser._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -116,7 +116,7 @@ const UsersManagement = () => {
             });
     };
     const handleReferralTree = (userId) => {
-        fetch(`/api/admin/user/${userId}/referral-tree`, {
+        axios.get(`/api/admin/user/${userId}/referral-tree`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("adminToken")}`
             }
@@ -131,7 +131,7 @@ const UsersManagement = () => {
 
     const handleDeleteUser = (userId) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
-            fetch(`/api/admin/user/${userId}`, {
+            axios.get(`/api/admin/user/${userId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("adminToken")}`
@@ -159,7 +159,7 @@ const UsersManagement = () => {
             return;
         }
 
-        fetch(`/api/admin/user/${selectedUser._id}/reset-password`, {
+        axios.get(`/api/admin/user/${selectedUser._id}/reset-password`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
