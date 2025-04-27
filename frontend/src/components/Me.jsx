@@ -1,4 +1,5 @@
 import "../styles/me.css";
+import "../styles/loader.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Confetti from "canvas-confetti";
 import axios from "axios";
@@ -115,7 +116,13 @@ const Me = ({ setUser }) => {
   const isRewardEligible = user?.totalEarning >= 100;
   const isRewardClaimed = user?.vipRewardClaimed?.includes(user?.vipLevel);
 
-  if (loading) return <h2>Loading...</h2>;
+ if (loading) return (
+    <div className="l">
+      <div className="loader">
+        <span className="loader-text">loading</span>
+        <span className="load"></span>
+      </div>
+    </div>);
   return (
     <div className="dashboard-container-main">
       <div className="dashboard-container">
