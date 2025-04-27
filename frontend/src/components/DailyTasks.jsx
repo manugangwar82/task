@@ -13,6 +13,7 @@ import Task8 from "../assets/images/task7.webp";
 import Task9 from "../assets/images/task8.webp";
 import Task10 from "../assets/images/task9.webp";
 import "../styles/dailyTask.css";
+import "../styles/loader.css";
 import { BASE_URL } from "../config";
 
 
