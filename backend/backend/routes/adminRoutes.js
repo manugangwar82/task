@@ -388,5 +388,30 @@ router.delete("/notifications/user/:userId", adminAuthMiddleware, async (req, re
 });
 
 
+router.put('/clear-all-tasks', async (req, res) => {
+  try {
+    await User.updateMany({}, { $set: { tasks: [] } });
+    res.status(200).json({ message: 'All users\' tasks cleared successfully.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Failed to clear tasks.' });
+  }
+});
+router.put('/clear-selected-tasks', async (req, res) => {
+  try {
+    const { userIds } = req.body; // array of user IDs
+    if (!userIds || !userIds.length) {
+      return res.status(400).json({ message: 'No users selected.' });
+    }
+
+    await User.updateMany({ _id: { $in: userIds } }, { $set: { tasks: [] } });
+    res.status(200).json({ message: 'Selected users\' tasks cleared successfully.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Failed to clear selected users\' tasks.' });
+  }
+});
+
+
 
 module.exports = router;
