@@ -12,6 +12,7 @@ import AnnouncementModal from "../components/AnnouncementModal"; // ⬅️ NEW
 import TaskHall from "../components/TaskHall"
 import "../styles/bottomNavbar.css";
 import "../styles/dashboard.css";
+import "../styles/loader.css";
 import { FaWallet } from "react-icons/fa";
 import { MdNotificationsActive } from "react-icons/md";
 import { BASE_URL } from "../config";
