@@ -99,7 +99,13 @@ const Dashboard = () => {
   };
 
 
-  if (loading) return <h2>Loading...</h2>;
+ if (loading) return (
+    <div className="l">
+      <div className="loader">
+        <span className="loader-text">loading</span>
+        <span className="load"></span>
+      </div>
+    </div>);
 
   return (
     <div className="dashboard">
