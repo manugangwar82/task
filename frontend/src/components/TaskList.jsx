@@ -10,6 +10,8 @@ import Task5 from "../assets/images/task4.webp";
 import Task6 from "../assets/images/task5.webp";
 import Task7 from "../assets/images/task6.webp";
 import Task8 from "../assets/images/task7.webp";
+import Task9 from "../assets/images/task8.webp";
+import Task10 from "../assets/images/task9.webp";
 import "../styles/taskList.css";
 import { CiWallet } from "react-icons/ci";
 import BottomNavbar from "../components/BottomNavbar"
@@ -30,6 +32,8 @@ const TaskList = ({ user, setUser }) => {
     1000: Task6,
     1500: Task7,
     2000: Task8,
+    3000: Task9,
+    5000: Task10,
   };
 
 
