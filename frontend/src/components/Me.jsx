@@ -226,7 +226,7 @@ const Me = ({ setUser }) => {
             </Link>
           </div>
           <div className="service-grid">
-            <Link to="" className="service-item">About us <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <Link to="/profile" className="service-item">About us <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path fillRule="evenodd" d="M6 3l5 5-5 5V3z" />
             </svg>
             </Link>
