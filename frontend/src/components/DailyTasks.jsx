@@ -10,6 +10,8 @@ import Task5 from "../assets/images/task4.webp";
 import Task6 from "../assets/images/task5.webp";
 import Task7 from "../assets/images/task6.webp";
 import Task8 from "../assets/images/task7.webp";
+import Task9 from "../assets/images/task8.webp";
+import Task10 from "../assets/images/task9.webp";
 import "../styles/dailyTask.css";
 import { BASE_URL } from "../config";
 
@@ -19,7 +21,7 @@ const DailyTasks = ({ user, setUser }) => {
   const [loading, setLoading] = useState(false);
   const [taskErrors, setTaskErrors] = useState({});
   const [boughtTasks, setBoughtTasks] = useState(new Set());
-  const taskImages = [Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8];
+  const taskImages = [Task1, Task2, Task3, Task4, Task5, Task6, Task7, Task8, Task9, Task10];
   
   // ✅ Server से Tasks लाओ
 
