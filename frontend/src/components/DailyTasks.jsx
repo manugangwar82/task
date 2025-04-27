@@ -166,7 +166,22 @@ const DailyTasks = ({ user, setUser }) => {
 
                 {!isPurchased ? (
                   <button className="buy-btn" onClick={() => buyTask(task._id)} disabled={loading}>
-                    {loading ? "⏳ Buying..." : "🛒 Buy Task"}
+                    {loading ? (
+                      <div className="dot-flex">
+                        <div className="dot-spinner">
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                          <div className="dot-spinner__dot"></div>
+                        </div>
+                      </div>
+                    ) : (
+                      "🛒 Buy Task"
+                    )}
                   </button>
                 ) : (
                   <button className="buy-btn purchased" disabled>
