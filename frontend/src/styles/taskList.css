@@ -142,8 +142,10 @@ span.profit-color {
 }
 
 .buy-btn1:disabled {
-  background-color: #ccc;
-  color: #666;
+/*   background-color: #ccc;
+  color: #666; */
+   background-color: #827d7d90;
+  color: #ffffff;
   cursor: not-allowed;
 }
 
