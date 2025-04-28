@@ -261,3 +261,10 @@
             /* width: 100% */
           }
 }
+@media (max-width: 672px) {
+    .l {
+        height: 800px;
+
+    }
+  
+}
