@@ -133,4 +133,29 @@
     text-decoration: underline;
    color: red;
   } */
+
+
+@media (max-width: 470px) {
+  .signup-img1>img {
+    width: 100%;
+
+
+  }
+
+  /* Login Form */
+  .login-form {
+
+    padding: 20px 15px;
+
+    width: 310px;
+  }
+
+  /* Body Styling */
+  .login-main-cont {
+
+    height: 550px;
+
+  }
+
+}
   
