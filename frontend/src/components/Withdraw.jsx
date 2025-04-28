@@ -67,8 +67,8 @@ const Withdraw = () => {
     if (!password.trim()) newErrors.password = "Password is required";
     if (!amount || isNaN(amount) || Number(amount) <= 0) {
       newErrors.amount = "Enter valid amount";
-    } else if (Number(amount) < 20) {
-      newErrors.amount = "Minimum withdrawal amount is 20 USDT"; // ✅ Added minimum $60 condition
+    } else if (Number(amount) < 50) {
+      newErrors.amount = "Minimum withdrawal amount is 50 USDT"; // ✅ Added minimum $60 condition
     } else if (user && Number(amount) > user.wallet) {
       newErrors.amount = "Insufficient balance";
     }
