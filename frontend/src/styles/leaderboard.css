@@ -132,36 +132,75 @@
     width: 100%;
   }
 @media (max-width: 470px) {
-  
- 
+
+  .left1 {
+
+    right: 207px;
+
+  }
+
+  .right1 {
+
+    left: 207px;
+    height: 25px;
+
+  }
+
+  .task-hall1 {
+    width: 40%;
+    /* margin-top: 30px; */
+  }
+
   .leaderboard-container {
 
     border-radius: 0px;
     padding: 10px 5px;
     margin: 0px 0px;
     padding-bottom: 100px;
-   
+
   }
+
+
+
+  .rank-badge {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #d1d1d1;
+  }
+
+  .leaderboard-username {
+    font-size: 14px;
+    font-weight: 500;
+
+  }
+
+  .leaderboard-earning {
+    /* font-weight: 500; */
+    color: #28a745;
+    font-size: 14px;
+  }
+
+
+}
+@media (max-width: 370px) {
+  .left1 {
+
+    right: 202px;
+
+  }
+
+  .right1 {
+
+    left: 202px;
+
+
+  }
+
   .task-hall1 {
-    width:40%;
 
-}
-.rank-badge {
-  font-size: 16px;
-  font-weight: 600;
-  margin-right: 10px;
-  color: #d1d1d1;
-}
-.leaderboard-username{
-  font-size: 14px;
-  font-weight: 500;
- 
-}
-.leaderboard-earning {
-  /* font-weight: 500; */
-  color: #28a745;
-  font-size: 14px;
-}
-
+    top: 14px;
+    /* margin-top: 30px; */
+  }
 
 }
