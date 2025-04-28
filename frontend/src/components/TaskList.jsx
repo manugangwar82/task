@@ -24,9 +24,9 @@ const TaskList = ({ user, setUser }) => {
   const [boughtTasks, setBoughtTasks] = useState([]); // ✅ Default Empty Array
   const [timers, setTimers] = useState({}); // ✅ Task Timers
   const priceToImageMap = {
-    20: Task1,
-    60: Task2,
-    100: Task3,
+    60: Task1,
+    100: Task2,
+    200: Task3,
     300: Task4,
     500: Task5,
     1000: Task6,
