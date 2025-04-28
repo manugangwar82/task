@@ -18,7 +18,7 @@
   .signup-img1>img{
     width: 500px;
     height: 250px;
-    border-radius: 15px;
+/*     border-radius: 15px; */
     object-fit: cover;
    
   }
