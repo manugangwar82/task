@@ -158,4 +158,14 @@
   }
 
 }
+@media (max-width: 672px) {
+  .signup-img1>img {
+    width: 500px;
+
+
+  }
+
+ 
+
+}
   
