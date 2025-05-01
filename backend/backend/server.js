@@ -20,7 +20,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 const corsOptions = {
-origin: ["https://earnwithcampa.store", "https://admin-9fyk.onrender.com"], // ✅ Array of allowed domains
+origin: ["https://earnwithcampa.site", "https://admin-9fyk.onrender.com"], // ✅ Array of allowed domains
   credentials: true, // ✅ Important for cookies / Authorization header
 };
 
