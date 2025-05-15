@@ -10,7 +10,7 @@ const NotificationBell = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       const token = localStorage.getItem("token");
-      const res = await fetch(`https://task-b1w0.onrender.com/api/user/notifications`, {
+      const res = await fetch(`https://task-8ibm.onrender.com/api/user/notifications`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -33,7 +33,7 @@ const NotificationBell = () => {
 
   const markAsRead = async (id) => {
     const token = localStorage.getItem("token");
-    fetch(`https://task-b1w0.onrender.com/api/user/notifications/${id}/read`, {
+    fetch(`https://task-8ibm.onrender.com/api/user/notifications/${id}/read`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
