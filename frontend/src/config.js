@@ -5,5 +5,5 @@
 // config.js
 export const BASE_URL = window.location.hostname.includes("localhost")
   ? "http://localhost:5000"
-  : "https://task-b1w0.onrender.com";
+  : "https://task-8ibm.onrender.com";
 
