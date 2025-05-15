@@ -34,19 +34,19 @@ const ReferralMonitoring = () => {
     useEffect(() => {
         const token = localStorage.getItem("adminToken");
 
-        fetch("https://task-b1w0.onrender.com/api/admin/top-referrers", {
+        fetch("https://task-8ibm.onrender.com/api/admin/top-referrers", {
             headers: { Authorization: `Bearer ${token}` },
         })
             .then(res => res.json())
             .then(data => setTopReferrers(data));
 
-        fetch("https://task-b1w0.onrender.com/api/admin/referral-chart", {
+        fetch("https://task-8ibm.onrender.com/api/admin/referral-chart", {
             headers: { Authorization: `Bearer ${token}` },
         })
             .then(res => res.json())
             .then(data => setIncomeData(data));
 
-        fetch("https://task-b1w0.onrender.com/api/admin/referral-settings", {
+        fetch("https://task-8ibm.onrender.com/api/admin/referral-settings", {
             headers: { Authorization: `Bearer ${token}` },
         })
             .then(res => res.json())
@@ -55,7 +55,7 @@ const ReferralMonitoring = () => {
 
     const updateRewardPercent = () => {
         const token = localStorage.getItem("adminToken");
-        fetch("https://task-b1w0.onrender.com/api/admin/referral-settings", {
+        fetch("https://task-8ibm.onrender.com/api/admin/referral-settings", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
