@@ -10,7 +10,7 @@ const WithdrawalRequests = () => {
     const token = localStorage.getItem("adminToken"); // Assuming the token is stored in localStorage
 
     useEffect(() => {
-        fetch("https://task-b1w0.onrender.com/api/admin/withdrawals", {
+        fetch("https://task-8ibm.onrender.com/api/admin/withdrawals", {
             headers: {
                 Authorization: `Bearer ${token}` // Include token in header for authentication
             }
@@ -44,7 +44,7 @@ const WithdrawalRequests = () => {
     const handleApprove = (id) => {
         if (!window.confirm("Approve this withdrawal?")) return;
 
-        fetch(`https://task-b1w0.onrender.com/api/admin/withdrawals/${id}/approve`, {
+        fetch(`https://task-8ibm.onrender.com/api/admin/withdrawals/${id}/approve`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}` // Include token for authentication
@@ -63,7 +63,7 @@ const WithdrawalRequests = () => {
     const handleReject = (id) => {
         if (!window.confirm("Reject this withdrawal?")) return;
 
-        fetch(`https://task-b1w0.onrender.com/api/admin/withdrawals/${id}/reject`, {
+        fetch(`https://task-8ibm.onrender.com/api/admin/withdrawals/${id}/reject`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}` // Include token for authentication
