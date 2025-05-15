@@ -14,7 +14,7 @@ const ClearTasksSection = () => {
       const fetchUsers = async () => {
         try {
             const token = localStorage.getItem("adminToken"); // <-- fetch fresh token inside
-          const res = await axios.get('https://task-b1w0.onrender.com/api/admin/users', {
+          const res = await axios.get('https://task-8ibm.onrender.com/api/admin/users', {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -43,7 +43,7 @@ const ClearTasksSection = () => {
             return;
           }
     
-          await axios.put('https://task-b1w0.onrender.com/api/admin/clear-selected-tasks', 
+          await axios.put('https://task-8ibm.onrender.com/api/admin/clear-selected-tasks', 
             { userIds: selectedUserIds },
             {
               headers: {
@@ -61,7 +61,7 @@ const ClearTasksSection = () => {
       const handleClearTasksForAll = async () => {
         try {
             const token = localStorage.getItem("adminToken"); // <-- fetch fresh token inside
-            await axios.put('https://task-b1w0.onrender.com/api/admin/clear-all-tasks',
+            await axios.put('https://task-8ibm.onrender.com/api/admin/clear-all-tasks',
             {}, 
             {
               headers: {
