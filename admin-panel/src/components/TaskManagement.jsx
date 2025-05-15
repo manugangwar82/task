@@ -26,7 +26,7 @@ const TaskManagement = () => {
     }, []);
 
     const fetchTasks = () => {
-        fetch("https://task-b1w0.onrender.com/api/admin/tasks", {
+        fetch("https://task-8ibm.onrender.com/api/admin/tasks", {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}` // Authorization header mein token bhejein
@@ -57,7 +57,7 @@ const TaskManagement = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const url = isEditing ? `https://task-b1w0.onrender.com/api/admin/tasks/${formData._id}` : "https://task-b1w0.onrender.com/api/admin/tasks";
+        const url = isEditing ? `https://task-8ibm.onrender.com/api/admin/tasks/${formData._id}` : "https://task-8ibm.onrender.com/api/admin/tasks";
         const method = isEditing ? "PUT" : "POST";
 
         fetch(url, {
@@ -79,7 +79,7 @@ const TaskManagement = () => {
     const handleDelete = (id) => {
         if (window.confirm("Are you sure to delete this task?")) {
             toast.success("Task Delete successfully ✅");
-            fetch(`https://task-b1w0.onrender.com/api/admin/tasks/${id}`, {
+            fetch(`https://task-8ibm.onrender.com/api/admin/tasks/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${token}` // Authorization header mein token bhejein
@@ -90,7 +90,7 @@ const TaskManagement = () => {
     };
 
     const toggleActive = (id, current) => {
-        fetch(`https://task-b1w0.onrender.com/api/admin/tasks/${id}/toggle`, {
+        fetch(`https://task-8ibm.onrender.com/api/admin/tasks/${id}/toggle`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
