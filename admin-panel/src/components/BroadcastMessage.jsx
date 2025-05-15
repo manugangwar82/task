@@ -13,7 +13,7 @@ const BroadcastMessage = () => {
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
-    fetch("https://task-b1w0.onrender.com/api/admin/users", {
+    fetch("https://task-8ibm.onrender.com/api/admin/users", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
       },
@@ -24,7 +24,7 @@ const BroadcastMessage = () => {
 
   useEffect(() => {
     if (selectedUser && selectedUser !== "all") {
-      fetch(`https://task-b1w0.onrender.com/api/admin/notifications/${selectedUser}`, {
+      fetch(`https://task-8ibm.onrender.com/api/admin/notifications/${selectedUser}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
         },
@@ -38,7 +38,7 @@ const BroadcastMessage = () => {
 
   const sendNotification = async () => {
     const target = selectedUser === "all" ? "all" : selectedUser;
-    const res = await fetch(`https://task-b1w0.onrender.com/api/admin/notifications/send`, {
+    const res = await fetch(`https://task-8ibm.onrender.com/api/admin/notifications/send`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const BroadcastMessage = () => {
     setTitle("");
 
     if (selectedUser !== "all") {
-      const refreshed = await fetch(`https://task-b1w0.onrender.com/api/admin/notifications/${selectedUser}`, {
+      const refreshed = await fetch(`https://task-8ibm.onrender.com/api/admin/notifications/${selectedUser}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
         },
@@ -63,7 +63,7 @@ const BroadcastMessage = () => {
   };
 
   const deleteNotification = async (notificationId) => {
-    const url = `https://task-b1w0.onrender.com/api/admin/notifications/${notificationId}`;
+    const url = `https://task-8ibm.onrender.com/api/admin/notifications/${notificationId}`;
     const res = await fetch(url, {
       method: "DELETE",
       headers: {
@@ -79,8 +79,8 @@ const BroadcastMessage = () => {
   const deleteAllNotifications = async () => {
     const url =
       selectedUser === "all"
-        ? `https://task-b1w0.onrender.com/api/admin/notifications/delete-all`
-        : `https://task-b1w0.onrender.com/api/admin/notifications/user/${selectedUser}`;
+        ? `https://task-8ibm.onrender.com/api/admin/notifications/delete-all`
+        : `https://task-8ibm.onrender.com/api/admin/notifications/user/${selectedUser}`;
 
     const res = await fetch(url, {
       method: "DELETE",
